@@ -9,7 +9,7 @@ def deal_card
 end
 
 def display_card_total(total)
-  puts total
+  puts 'Your cards add up to #{total}'
 end
 
 def prompt_user
@@ -22,7 +22,7 @@ def get_user_input
 end
 
 def end_game(value)
-  puts 'Sorry you lose. Your total was #{value}. Thanks for playing!'
+  puts 'Sorry, you hit #{value}. Thanks for playing!'
 end
 
 def initial_round
@@ -58,6 +58,7 @@ def runner
   welcome
   sum = initial_round
   hit?
+  display_card_total(sum)
   loop do
     if sum > 21
       end_game
