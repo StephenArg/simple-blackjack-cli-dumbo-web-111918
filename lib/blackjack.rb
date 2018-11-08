@@ -65,4 +65,5 @@ def runner
     else
       hit?
     end
+  end
 end
