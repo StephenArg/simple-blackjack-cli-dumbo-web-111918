@@ -16,7 +16,7 @@ def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
 
-def user_input
+def get_user_input
   value = gets.chomp
   return value
 end
@@ -35,7 +35,7 @@ end
 
 def hit?(total)
   prompt_user
-  response = user_input
+  response = get_user_input
   value = 0
   if response == 's'
     return number
