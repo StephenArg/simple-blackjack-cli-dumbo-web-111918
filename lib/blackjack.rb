@@ -29,8 +29,8 @@ def initial_round
   first = deal_card
   second = deal_card
   sum = first + second
-  return sum
   display_card_total(sum)
+  return sum
 end
 
 def hit?(total)
@@ -38,7 +38,7 @@ def hit?(total)
   response = get_user_input
   value = 0
   if response == 's'
-    return number
+    return total
   elsif response == 'h'
     value = deal_card
   else
@@ -62,7 +62,7 @@ def runner
   display_card_total(total)
   loop do
     if total > 21
-      end_game(sum)
+      end_game(total)
       break
     else
       total = hit?(total)
