@@ -59,7 +59,6 @@ end
 def runner
   welcome
   total = initial_round
-  display_card_total(total)
   loop do
     if total > 21
       end_game(total)
