@@ -66,4 +66,3 @@ def runner
       hit?
     end
 end
-    
