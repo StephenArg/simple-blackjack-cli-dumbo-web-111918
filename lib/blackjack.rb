@@ -33,9 +33,10 @@ def initial_round
   display_card_total(sum)
 end
 
-def hit?
+def hit?(total)
   prompt user
   response = get_user_input.downcase
+  value = 0
   if response == 's'
     return
   elsif response == 'h'
@@ -44,6 +45,7 @@ def hit?
   else
     invalid_command
   end
+  return total += value
 end
 
 def invalid_command
